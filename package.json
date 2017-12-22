@@ -1,0 +1,57 @@
+{
+  "name": "btc-cli-tdd",
+  "version": "1.0.0",
+  "description": "A CLI to convert BTC to any currency using tdd.",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rimraf bin",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir bin src",
+    "build:watch": "npm run build -- --watch",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --reporter nyan",
+    "test:tdd": "npm run test -- --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "preferGlobal": true,
+  "bin":{
+    "btc-cli-tdd": "bin/main.js"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leomendesm/btc-cli-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Leonardo Mendes Miraglia <leo.mi.me@gmail.com> (https://leomendesm.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leomendesm/btc-cli-tdd/issues"
+  },
+  "homepage": "https://github.com/leomendesm/btc-cli-tdd#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1",
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0",
+    "rimraf": "^2.6.1"
+  }
+}
