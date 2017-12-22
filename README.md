@@ -9,7 +9,7 @@ Want to learn how to create your own CLI? [Check this course about JS with TDD](
 ### Installing
 
 ```sh
-$ npm install -g btc-converter
+$ npm install -g btc-cli-tdd
 ```
 
 ### How to use
@@ -17,7 +17,7 @@ $ npm install -g btc-converter
 ```sh
 btc-converter --help
 
-  Usage: btc-converter [options]
+  Usage: btc-cli-tdd [options]
 
   Convert Bitcoin to any currency defined
 
