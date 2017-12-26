@@ -1,10 +1,7 @@
 # btc-cli-tdd
 
 
-> A CLI to convert Bitcoin to any currency provided.
-
-
-Want to learn how to create your own CLI? [Check this course about JS with TDD](https://www.udemy.com/js-com-tdd-na-pratica/?couponCode=GITHUB_LINK)
+A CLI to convert Bitcoin to any currency provided.
 
 ### Installing
 
@@ -15,7 +12,7 @@ $ npm install -g btc-cli-tdd
 ### How to use
 
 ```sh
-btc-converter --help
+btc-cli-tdd --help
 
   Usage: btc-cli-tdd [options]
 
